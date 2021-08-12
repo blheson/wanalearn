@@ -1,0 +1,19 @@
+{
+    "name": "blheson/cheaplearning",
+    "description": "Plugin helps to setup a course resgistration site",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "blheson",
+            "email": "blessingworld007@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+          "Cheap_Learning_Fast\\": "src/"
+        }
+      }
+}

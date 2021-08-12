@@ -1,0 +1,83 @@
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+.flex-space-end {
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    padding-top: 48px;
+}
+
+.checkout-btn {
+    margin-top: 32px;
+    background: #ff226a;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+input:not([type=checkbox]),input:not([type="checkbox"]):focus-visible, select, input:not([type="image"]):focus-visible {
+    height: 50px;
+    border: none;
+    padding: 13px;
+    border-bottom: 1px solid #929292;
+    outline: none;
+    background-color: #fbfbfb;
+    min-width: 250px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#payment-form {
+    width: 100%
+}
+
+.subsec-wrapper {
+    width: 100%;
+}
+
+.summary-box {
+    padding: 15px;
+    border: 1px dashed #969696;
+    background-color: #f0f0f0;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.big-title {
+    background: #0ec7ad;
+    padding: 11px;
+    color: #fff;
+    margin: 22px auto;
+}
+
+.contain {
+    margin: 15px;
+}
+
+@media (max-width:480px) {
+    .flex-space-end.mobile {
+        flex-direction: column;
+    }
+    header {
+        text-align: center;
+    }
+    input:not([type="image"]), select {
+        margin: auto;
+    }
+}

@@ -1,0 +1,38 @@
+body {
+    font-family: "Varela", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.emphasis {
+    font-weight: bold;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.rotate {
+    animation: rotation 1s infinite linear;
+}
+.btn-theme{
+    color: #fff;
+    background-color: #e91e63;
+    border-color: #e91e63;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.icon-loader:before {
+    height: 19px;
+    width: 19px;
+}
