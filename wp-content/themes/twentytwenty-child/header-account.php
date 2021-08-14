@@ -21,7 +21,7 @@ $root_for_asset = get_stylesheet_directory_uri()
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Wanalearn Admin</title>
-    
+
     <!-- plugins:css -->
     <link rel="stylesheet" href="" id="load-font-for-all-pages">
     <link rel="stylesheet" href="<?php echo $root_for_asset ?>/assets/css/common.css">
@@ -36,8 +36,19 @@ $root_for_asset = get_stylesheet_directory_uri()
     <link rel="stylesheet" href="<?php echo $root_for_asset ?>/assets/css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="" />
-    <link rel="icon" href="<?php echo get_stylesheet_directory_uri().'/assets/img/wana-icon.png'?>">
-  
+    <link rel="icon" href="<?php echo get_stylesheet_directory_uri() . '/assets/img/wana-icon.png' ?>">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-167Y4G26TN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-167Y4G26TN');
+    </script>
 </head>
 
 <body class="sidebar-dark">

@@ -130,7 +130,10 @@ class Plugin {
 
 		return self::$instance;
 	}
-
+	public static function theme_head (){
+		 echo '<script src="https://www.googletagmanager.com/gtag/js?id=G-167Y4G26TN"></script>';
+		 echo '<script src="'.get_stylesheet_directory_uri() . '/assets/js/g-analytics.js"></script>';
+	}
     /**
      * Runs all code for plugin deactivation procedures
      *

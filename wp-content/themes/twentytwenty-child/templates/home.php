@@ -73,9 +73,24 @@ get_header('complex');
     }
 
     .faq-box {
-        padding: 1rem;
-        background-color: #fff;
+
         margin: 10px
+    }
+
+    .faq-bound {
+        padding: 1rem
+    }
+
+    .faq-title {
+        background-color: #5a5658;
+        color: #fff;
+        cursor: pointer;
+        height: 90px;
+        font-size: 17px;
+    }
+
+    .faq-answer {
+        background-color: #fff;
     }
 
     @media (max-width:480px) {
@@ -140,8 +155,6 @@ get_header('complex');
                 <div class="left-content">
                     <h3 style="font-size: 30px;">Get Paid As You Promote High Quality Products</h3>
                     <div style="font-size: 17px;color:darkgray">
-
-
                         <p>You just need to sign up, get a link and start promoting with that link. We have high value digital products on Wanalearn that you can promote. </p>
                         <p>We have a robust tracking system that will track all your sales.</p>
                     </div>
@@ -157,57 +170,67 @@ get_header('complex');
             Frequently Asked Questions
         </h2>
         <div class="container">
-            <div class="row">
+            <div class="row faq-row">
+                <div class="col-md-6">
 
-                <div class="col-md-6 col-lg-4 col-xs-6 col-sm-6">
                     <div class="faq-box">
-                        <h4>What Happens If a Product I Bought does not Meet My Expectation?</h4>
-                        <p>
-                            Products on Wanalearn are backed by our 30-day money back guarantee.
+                        <p class="faq-title faq-bound">What Happens If a Product I Bought does not Meet My Expectation?</p>
+                        <div class="faq-answer faq-bound" style="display: none;">
+                            <p>
+                                Products on Wanalearn are backed by our 30-day money back guarantee.
 
-                            This means that if you are not satisfied with the product, you can ask for a full refund within 30 days of purchase and you will be refunded.</p>
-                        <p>
+                                This means that if you are not satisfied with the product, you can ask for a full refund within 30 days of purchase and you will be refunded.</p>
+                            <p>
 
-                            However, if we find out that you take advantage of this to get free access to products, you will be banned from the platform.
-                        </p>
+                                However, if we find out that you take advantage of this to get free access to products, you will be banned from the platform.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xs-6 col-sm-6">
+
 
                     <div class="faq-box">
-                        <h4>Can I List Physical Knowledge Products?</h4>
-                        <p>
-                            No. The Wanalearn platform is strictly for the sales and distribution of digital products only.
-                        </p>
+                        <p class="faq-title faq-bound">Can I List Physical Knowledge Products?</p>
+                        <div class="faq-answer faq-bound" style="display:none">
+                            <p>
+                                No. The Wanalearn platform is strictly for the sales and distribution of digital products only.
+                            </p>
 
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xs-6 col-sm-6">
-
-                    <div class="faq-box">
-                        <h4> What Happens If I am Not Satisfied With a Product I Purchased on Wanalearn?</h4>
-                        <p>
-                            Majority of the products on Wanalearn (except otherwise stated) are backed by our 30-day money back guarantee.
-                        </p>
-                        <p>
-                            What this means is that if you are not satisfied with the product you purchased from Wanalearn, you can ask for a full refund within 30 days of purchase and we will send you the refund.
-                        </p>
-                        <p>
-                            However, we also take note of serial "refunders" and such people are banned from the platform.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4 col-xs-6 col-sm-6">
-
-                    <div class="faq-box">
-                        <h4> What Happens If I am Not Satisfied With a Product I Purchased on Wanalearn?</h4>
-                        <p>
-                            Majority of the products on Wanalearn (except otherwise stated) are backed by our 30-day money back guarantee.
-                        </p>
+                        </div>
                     </div>
 
                 </div>
+                <div class="col-md-6">
+
+
+                    <div class="faq-box">
+                        <p class="faq-title faq-bound"> What Happens If I am Not Satisfied With a Product I Purchased on Wanalearn?</p>
+                        <div class="faq-answer faq-bound" style="display:none">
+                            <p>
+                                Majority of the products on Wanalearn (except otherwise stated) are backed by our 30-day money back guarantee.
+                            </p>
+                            <p>
+                                What this means is that if you are not satisfied with the product you purchased from Wanalearn, you can ask for a full refund within 30 days of purchase and we will send you the refund.
+                            </p>
+                            <p>
+                                However, we also take note of serial "refunders" and such people are banned from the platform.</p>
+
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="faq-box">
+                        <p class="faq-title faq-bound"> What Happens If I am Not Satisfied With a Product I Purchased on Wanalearn?</p>
+                        <div class="faq-answer faq-bound" style="display:none">
+                            <p>
+                                Majority of the products on Wanalearn (except otherwise stated) are backed by our 30-day money back guarantee.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     </div>
@@ -216,6 +239,16 @@ get_header('complex');
     document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.hero-bg').style.cssText = 'background: url(https://images.unsplash.com/photo-1600195077909-46e573870d99?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80);'
     })
+    document.querySelector('.faq-row').addEventListener('click', (e) => {
+        let elem = e.target;
+        if (elem.classList.contains('faq-title')) {
+            let answer = elem.parentElement.querySelector('.faq-answer')
+            if (answer.style.display == '')
+                answer.style.display = 'none'
+            else
+                answer.style.display = ''
+        }
+    });
 </script>
 <?php
 get_footer('complex');
